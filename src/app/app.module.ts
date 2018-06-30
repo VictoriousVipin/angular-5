@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
 
 //Components
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { ContactService } from './contact/contact.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([{
       path: '',
       redirectTo: '/home',
