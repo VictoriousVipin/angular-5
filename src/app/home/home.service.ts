@@ -11,6 +11,6 @@ export class HomeService {
    }
    
    getHomeData(): Observable<any> {
-     return this.http.get('https://my-json-server.typicode.com/victoriousvipin/angular-5/db');
+     return this.http.get('https://my-json-server.typicode.com/vishek2/angular/home');
    }
 }

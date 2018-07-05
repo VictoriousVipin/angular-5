@@ -1,3 +1,9 @@
 <p>
   home works!
+  <button (click)="loadData()">Load Data</button>
 </p>
+<ul>
+  <li *ngFor="let data of data">
+    {{data.title}}
+  </li>
+</ul>
