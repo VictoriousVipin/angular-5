@@ -16,6 +16,9 @@ import { HomeService } from './home/home.service';
 import { AboutService } from './about/about.service';
 import { ContactService } from './contact/contact.service';
 
+//Routes
+import {AppRoutes} from './app.routes';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,27 +30,7 @@ import { ContactService } from './contact/contact.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot([{
-      path: '',
-      redirectTo: '/home',
-      pathMatch: 'full'
-    },
-    {
-      path: 'home',
-      component: HomeComponent
-    },
-    {
-      path: 'about',
-      component: AboutComponent
-    },
-    {
-      path: 'contact',
-      component: ContactComponent
-    },
-    {
-      path: 'logout',
-      component: LogoutComponent
-    }])
+    RouterModule.forRoot(AppRoutes)
   ],
   providers: [HomeService, AboutService, ContactService],
   bootstrap: [AppComponent]
