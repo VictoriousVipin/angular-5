@@ -16,4 +16,17 @@ export class HomeService {
       return data[i];
     }));
    }
+
+   getStreamData() {
+     let count = 0;
+    return new Observable<any>(obs => {
+      setInterval(() => {
+        obs.next(new Date());
+        count++;
+        if(count == 5) {
+          obs.complete();
+        }
+      }, 1000)
+    });
+   }
 }

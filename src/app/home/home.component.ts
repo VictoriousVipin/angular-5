@@ -9,7 +9,12 @@ import {ApiData, HomeData} from '../interfaces/apidata.interface';
 })
 export class HomeComponent implements OnInit {
   public data: HomeData;
-  constructor(private homeService: HomeService) { }
+  public currentTime: Date;
+  constructor(private homeService: HomeService) { 
+    this.homeService.getStreamData().subscribe((data) => {
+      this.currentTime = data;
+    });
+  }
 
   ngOnInit() {
     
