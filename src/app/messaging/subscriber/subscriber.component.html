@@ -3,6 +3,6 @@
 <button (click)="sendMessage()">Send</button>
 <ul>
   <li style="list-style: none;" *ngFor="let msg of messageHistory.reverse()">
-    <span [ngClass]="{green: msg.name==='Ritesh', red: msg.name==='Vipin'}">{{msg.name | uppercase}}</span>: {{msg.message}}
+    <span [ngClass]="{red: msg.name==='Ritesh', green: msg.name==='Vipin'}">{{msg.name | uppercase}}</span>: {{msg.message}}
   </li>
 </ul>
