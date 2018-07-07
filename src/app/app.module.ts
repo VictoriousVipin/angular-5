@@ -22,6 +22,9 @@ import {AppRoutes} from './app.routes';
 import { PublisherComponent } from './messaging/publisher/publisher.component';
 import { SubscriberComponent } from './messaging/subscriber/subscriber.component';
 import { MessagingComponent } from './messaging/messaging.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
+import { AboutEmployeeComponent } from './about/about-employee/about-employee.component';
+import { MydatePipe, SquarerootPipe, PowerofPipe } from './pipes/mydate.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,12 @@ import { MessagingComponent } from './messaging/messaging.component';
     LogoutComponent,
     PublisherComponent,
     SubscriberComponent,
-    MessagingComponent
+    MessagingComponent,
+    AboutCompanyComponent,
+    AboutEmployeeComponent,
+    MydatePipe,
+    SquarerootPipe,
+    PowerofPipe
   ],
   imports: [
     BrowserModule,
