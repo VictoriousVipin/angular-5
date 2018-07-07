@@ -17,3 +17,8 @@ export class AboutData {
 export class ContactData {
     name?: string;
 }
+
+export class Chat {
+    name?: string;
+    message?: string;
+}

@@ -1,0 +1,6 @@
+<h3>Vipin</h3>
+<input type="text" [(ngModel)]="message">
+<button (click)="sendMessage()">Send</button>
+<ul>
+  <li style="list-style: none;" *ngFor="let msg of messageHistory.reverse()"><span style="color: Blue">{{msg.name}}</span>: {{msg.message}}</li>
+</ul>

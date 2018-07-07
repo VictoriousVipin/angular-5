@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HomeService} from './home.service';
-import {ApiData} from '../interfaces/apidata.interface';
+import {ApiData, HomeData} from '../interfaces/apidata.interface';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +8,15 @@ import {ApiData} from '../interfaces/apidata.interface';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public data: ApiData;
+  public data: HomeData;
   constructor(private homeService: HomeService) { }
 
   ngOnInit() {
     
   }
 
-  loadData(): void {
-    this.homeService.getHomeData().subscribe((data) => {
+  loadData(i: number): void {
+    this.homeService.getHomeData(i).subscribe((data) => {
       this.data = data;
     });
   }
