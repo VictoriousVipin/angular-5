@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'jscoder'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_4d4e1dc65add4ff7807ceb61c682666c }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_4885a667d28e49c0b927c67f73b809e6 }}
         package: .
